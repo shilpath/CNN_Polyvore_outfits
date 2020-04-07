@@ -53,7 +53,7 @@ class polyvore_dataset:
                 inp_list.append(line.split("\n")[0] + '.jpg')
 
         for x in files:
-            if x[:-4] in id_to_category:
+            if x[:-4] in id_to_category and x not in inp_list:
                 X.append(x)
                 y.append(int(id_to_category[x[:-4]]))
 

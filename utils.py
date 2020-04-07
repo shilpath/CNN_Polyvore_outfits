@@ -12,10 +12,19 @@ Config['checkpoint_path'] = ''
 
 
 Config['use_cuda'] = True
-Config['debug'] = True
-Config['num_epochs'] = 2
-Config['batch_size'] = 64
 
+'''
+Setting Config['debug'] = True will take only 100 data points from the entire dataset for debugging purposes.
+While training model on full data, then set Config['debug'] = False which will include the entire dataset.
+'''
+Config['debug'] = False
+
+#Config['num_epochs'] can be set to a smaller value for debugging purposes.
+Config['num_epochs'] = 20
+
+#Batch size and learning rate can be varied as required.
+Config['batch_size'] = 64
 Config['learning_rate'] = 0.001
+
 Config['num_workers'] = 1
 
